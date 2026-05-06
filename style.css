@@ -15,22 +15,22 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-}
 
 header {
-    background: linear-gradient(135deg, #27ae60, #2ecc71); /* 濃い緑から明るい緑へ */
-    color: white;
-    padding: 3rem 1rem;
-    text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.2);
+    position: relative;
 }
 
-header h1 {
-    font-size: 3rem;
-    background: linear-gradient(90deg, #ffffff, #d4f5e0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.2); 
+    border-radius: 12px;
+}
+
+header h1,
+header p {
+    position: relative; 
 }
 
 section {
