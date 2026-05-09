@@ -35,7 +35,7 @@ header p {
 
 section {
     /* 背景を白の半透明に */
-    background: rgba(255, 255, 255, 0.4); 
+    background: rgba(255, 255, 255, 0.15); 
     
     /* 背後をぼかす */
     backdrop-filter: blur(12px);
