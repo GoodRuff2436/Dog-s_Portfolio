@@ -66,7 +66,8 @@ section:hover {
 }
 
 h2 {
-    color: #27ae60;
+    color: #fff;
+    font-weight: normal;
     font-size: 1rem;
     border-bottom: 2px solid #e0eadd;
     padding-bottom: 10px;
