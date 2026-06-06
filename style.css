@@ -24,11 +24,14 @@ header::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.2); 
     border-radius: 12px;
 }
 
-header h1,
+header h1 {
+    font-size: 3rem;
+    font-family: "Black Han Sans", sans-serif;
+    /*sans-serif もし指定したフォントが読み込めなかったら、標準のゴシック体を使ってね！*/
+}
 header p {
     position: relative; 
 }
@@ -42,7 +45,7 @@ section {
     -webkit-backdrop-filter: blur(12px);
     
     /* 枠線（ほんのり緑を混ぜるとヘッダーと馴染みます） */
-    border: 1px solid rgba(46, 204, 113, 0.2);
+    border: 1px solid rgba(22, 55, 203, 0.2);
     border-radius: 12px;
     
     padding: 30px;
@@ -66,41 +69,61 @@ section:hover {
 }
 
 h2 {
-    color: #fff;
+    color: #ffffff;
     font-size: 1rem;
-    border-bottom: 2px solid #e0eadd;
+    border-bottom: 2px solid #9fae9b;
     padding-bottom: 10px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
 }
 
-/* リストアイテム：左の線を緑に */
+/* リストアイテム：線形探索法～、バブル～ */
 li {
     margin-bottom: 15px;
     padding: 15px;
-    background-color: #fcfdfc;
     border-radius: 8px;
-    border-left: 4px solid #2ecc71;
+    background-color: rgba(255, 255, 255, 0.65);
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    border-left: 4px solid #2c4135;
+
+    /* 【追加】ガラスの輪郭をうっすら引き締める、細い白線（上・右・下に適用されます） */
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+#works li {
+
+/* 線形探索法アルゴリズム */
+    color: #2c4135;
+}
+
+/* バブルソート */
+#works li strong {
+    color: #2c4135;
 }
 
 /* リンクボタン */
-a {
-    color: white;
-    background-color: #27ae60;
+.button-group a {
+    color: rgb(255, 255, 255); 
+
+    background-color: rgba(96, 126, 66, 0.4);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(96, 126, 66, 0.6);
+
     padding: 10px 20px;
     border-radius: 25px;
     display: inline-block;
     transition: all 0.3s;
-    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.2);
+    box-shadow: 0 4px 10px rgba(96, 112, 103, 0.2);
     text-decoration: none;
-}
-
-.button-group {
-    display: flex;       /* 横並びにする */
-    gap: 15px;          /* ボタン同士の間隔 */
-    flex-wrap: wrap;    /* 画面が狭くなったら自動で折り返す */
-    margin-top: 15px;
 }
 
 footer {
