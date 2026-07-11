@@ -30,8 +30,11 @@ header::before {
 header h1 {
     font-size: 3rem;
     font-family: "Black Han Sans", sans-serif;
-    /*sans-serif もし指定したフォントが読み込めなかったら、標準のゴシック体を使ってね！*/
+    color: transparent;             /* 文字の中身を完全に透明（シースルー）にする */
+    -webkit-text-stroke: 1px #fff;  /* 1pxの白い輪郭線を引く */
+    font-weight: 700;
 }
+
 header p {
     position: relative; 
 }
